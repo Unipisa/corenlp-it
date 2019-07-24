@@ -1,0 +1,47 @@
+
+### CoreNLP-Italian custom annotators classes ####
+customAnnotatorClass.statTokSent: it.unipi.fileli.colinglab.pipeline.stat_tok_sent.annotator.StatTokSentAnnotator
+customAnnotatorClass.upos : it.unipi.fileli.colinglab.pipeline.upos.UPosAnnotator
+customAnnotatorClass.udLemma: it.unipi.fileli.colinglab.pipeline.UD_Lemma.UDLemmaAnnotator
+
+
+### Other custom annotators classes ###
+customAnnotatorClass.tokensregex = edu.stanford.nlp.pipeline.TokensRegexAnnotator
+
+
+
+#### Pipeline ####
+annotators: statTokSent,pos,upos,udLemma,depparse
+
+
+
+### Input ###
+
+file = <file_to_annotate>
+
+
+### Specific classes properties ###
+
+statTokSent.model = it/unipi/fileli/colinglab/models/stat_tok_sent/_it_all-ud-tokenizer.ser.gz
+
+statTokSent.multiWordRules = it/unipi/fileli/colinglab/models/stat_tok_sent/it-ud.clitics.bootstrapped.txt
+statTokSent.windowSize = 4
+
+pos.model = it/unipi/fileli/colinglab/models/pos/it-ud-pos-tagger-model
+
+upos.uPoS-mapping = it/unipi/fileli/colinglab/models/pos/uPosMapFile.freq.table
+
+
+udLemma.model= it/unipi/fileli/colinglab/models/UD_Lemma/fullexMorph.UD.splitted.ser.gz
+#udLemma.serializeTo= <path_to_serialized_model>
+
+
+depparse.model = it/unipi/fileli/colinglab/models/depparse/S-Parser-w2v300.model.ser.gz
+
+
+### Output  ###
+
+enforceRequirements=false
+replaceExtension = true
+outputDirectory = <path_to_output_dir>
+outputFormat = conllu
