@@ -1,5 +1,5 @@
 # CoreNLP-it
-A collection of CoreNLP add-on modules and models for processing Italian texts.
+A collection of CoreNLP add-on modules and models for processing Italian texts developed by the [CoLing Lab Team](http://colinglab.humnet.unipi.it/) of [University of Pisa](https://www.unipi.it/).
 
 The CoreNLP-it package provides a collection fo classes and models that are built as an add-on to the Stanford CoreNLP.\
 The main purpose of CoreNLP-it is to exploit the CoreNLP framework in order to deal with Italian texts and produce an output that is fully compliant with the *Universal Dependencies(UD)* guidelines for representation.
@@ -30,7 +30,7 @@ Each custom annotator replaces entirely the original CoreNLP annotator, both for
 
 Each custom annotator requires its own specific properties.
 
-We strongly suggest to use the properties file by following the [CoreNLP guidelines](https://www.google.com).
+We strongly suggest to use the properties file by following the [CoreNLP guidelines](https://stanfordnlp.github.io/CoreNLP/cmdline.html).
 
 An example of command line usage with a properties file:
 
